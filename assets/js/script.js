@@ -1,3 +1,8 @@
+// load #get-started on page load
+var getStarted = document.querySelector("#get-started")
+    //eventListener on page load ???
+    element.setAttribute("data-visibility" , "visible");
+
 var container = document.querySelector(".container");
 
 container.addEventListener("click", function(event) {
@@ -11,4 +16,4 @@ container.addEventListener("click", function(event) {
 
         // all the text in the html doc will have to be stored in data sets
     }
-})
+});

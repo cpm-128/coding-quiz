@@ -44,6 +44,55 @@ header a {
 }
 
 .container {
-    border: solid red 1px;
+    border: solid red 2px;
     margin: 20px;
+}
+
+.title, .question {
+    border: solid green 2px;
+    margin: 5px;
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.question{
+    border: solid orange 2px;
+    text-align: left;
+    margin: 0;
+}
+
+p {
+    line-height: 1.2em;
+}
+
+.button {
+    background-color: var(--secondary-color);
+    width: 35%;
+    padding: 7px 5px;
+    border-radius: 4px;
+    margin: 10px 0;
+}
+
+.button:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.multiple-choice-list {
+    border: solid blue 2px;
+}
+
+ul {
+    list-style: none;
+}
+
+.feedback {
+    font-size: 24px;
+    font-style: italic;
+    letter-spacing: 0.25em;
+    font-weight: lighter;
+    color: var(--accent-color);
+    border-top: 1px var(--accent-color) solid;
 }

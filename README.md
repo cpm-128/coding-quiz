@@ -3,7 +3,7 @@
 ## Parameters
 This is a timed technical coding quiz with multiple-choice questinos. This app will run in the browser, and will feature dynamically updated HTML and CSS powered by JavaScript code.
 
-## user Story
+## User Story
 AS A coding boot camp student
 
 I WANT to take a timed quiz on JavaScript fundamentals that stores high scores

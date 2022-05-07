@@ -1,0 +1,23 @@
+/* remove browser default styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* branding */
+:root {
+    --primary-color: rgb(32,85,107);
+    --primary-color-transp: rgba(32,85,107,0.9);
+    --secondary-color: rgb(195,193,186);
+    --black: #000;
+    --white: #ffffff;
+    --accent-color: rgb(178,199,198);
+    --heading-font: "Playfair Display", Helvetica, serif;
+    --paragraph-font: Quicksand, Arial, serif;
+
+}
+
+body {
+    font-family: var(--paragraph-font);
+}

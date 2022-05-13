@@ -45,7 +45,6 @@ header a {
 
 .container {
     border: solid red 2px;
-    margin: 20px;
 }
 
 .title, .question {

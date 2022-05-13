@@ -1,11 +1,9 @@
 // define variables
 var timerEl = document.getElementById('countdown');
 var timePenaltyEl = document.getElementById('time-penalty');
-
-// on page load
-// add classes to hide the questions
-// end on page load
-
+var correctAnswerClick = correctAnswers [
+    
+]
 // function for countdown timer
 function countdown() {
     var timeLeft = 10;
@@ -63,6 +61,12 @@ $("#get-started").on("click" , "#start-button" , function() {
         // display feedback-incorrect
         // timepenalty(); to countodwn the 5-second penalty
     // next question
+
+$(".multiple-choice-list").on("click" , ".button" , function() {
+        if {
+            
+        }
+      });
 //end check for correctness
 
 // loop through the quesions

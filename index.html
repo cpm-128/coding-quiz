@@ -42,7 +42,7 @@
             </div>
 
             <div id="question-1"
-                class="row"
+                class="row d-none"
                 data-number="1">
                 <div class="col-12">
                     <div class="question">
@@ -72,9 +72,9 @@
             <div id="feedback"
                 class="row">
                 <div
-                class="col-12"
-                data-correct-text="Correct!"
-                data-incorrect-text="Incorrect.">
+                class="col-12">
+                    <p class="correct-answer d-none">Correct!</p>
+                    <p class="incorrect-answer d-none">Incorrect. <span id="time-penalty"></span> second penalty.</p>
                 </div>
             </div>
 

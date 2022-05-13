@@ -1,5 +1,6 @@
 // define variables
 var timerEl = document.getElementById('countdown');
+var timePenaltyEl = document.getElementById('time-penalty');
 
 // on page load
 // add classes to hide the questions
@@ -26,16 +27,43 @@ function countdown() {
 }
 // end countdown timer
 
-// start game on click, begin countdown
+// function for time penalty
+function timePenalty() {
+    var penaltyLeft = 5;
+    var penaltyInterval = setInterval(function () {
+        if (penaltyLeft > 0) {
+            timePenaltyEl.textContent = penaltyLeft;
+            penaltyLeft--;
+        } else {
+            clearInterval(penaltyInterval);
+        }
+    }, 1000);
+    // ** ADD TBD - at the end of the time penalty, should move to next question; this will probably be in a for loop? not here
+};
+// end time penalty
+
+// start game on click, begin countdown, display question 1
 $("#get-started").on("click" , "#start-button" , function() {
     var startGame = $(this)
       $("#get-started").addClass("d-none")
       console.log(">>> start button clicked >>>")
     // callback countdown timer
     countdown();
+    // display question 1
+    $("#question-1").removeClass("d-none");
   });
 // end start game button functionality
 
+// start check for correctness
+// on click within class="multiple-choice-list"
+    // if button class="correct-answer"
+        // display feedback-correct
+        // wait 0.5 second
+    // else
+        // display feedback-incorrect
+        // time-penalty(); to countodwn the 5-second penalty
+    // next question
+//end check for correctness
 
 var container = document.querySelector(".container");
 

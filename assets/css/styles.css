@@ -96,7 +96,7 @@ ul {
     list-style: none;
 }
 
-.feedback {
+#feedback {
     font-size: 24px;
     font-style: italic;
     letter-spacing: 0.25em;

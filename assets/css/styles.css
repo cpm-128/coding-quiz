@@ -13,8 +13,8 @@
     --black: #000;
     --white: #ffffff;
     --accent-color: rgb(178,199,198);
-    --heading-font: "Playfair Display", Helvetica, serif;
-    --paragraph-font: Quicksand, Arial, serif;
+    --heading-font: "Josefin Sans", Arial, sans-serif;
+    --paragraph-font: Roboto, Arial, serif;
 
 }
 
@@ -54,6 +54,7 @@ header a {
     font-size: 32px;
     font-weight: bold;
     color: var(--primary-color);
+    font-family: var(--heading-font);
 }
 
 .question{

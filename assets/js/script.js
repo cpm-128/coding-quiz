@@ -1,4 +1,9 @@
+// define variables
 var timerEl = document.getElementById('countdown');
+
+// on page load
+// add classes to hide the questions
+// end on page load
 
 // function for countdown timer
 function countdown() {
@@ -14,12 +19,12 @@ function countdown() {
         } else {
         timerEl.textContent = 'GAME OVER';
         clearInterval(timeInterval);
-        displayMessage();
         // ** ADD SOMETHING TO CLEAR QUESTIONS/SHOW FINAL SCORE WITH PENALTY
           }
         }, 1000);
     console.log(">>> begin countdown >>>")
 }
+// end countdown timer
 
 // start game on click, begin countdown
 $("#get-started").on("click" , "#start-button" , function() {
@@ -29,6 +34,7 @@ $("#get-started").on("click" , "#start-button" , function() {
     // callback countdown timer
     countdown();
   });
+// end start game button functionality
 
 
 var container = document.querySelector(".container");

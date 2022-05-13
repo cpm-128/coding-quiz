@@ -43,14 +43,6 @@ header a {
     text-align: right;
 }
 
-.visible {
-    visibility: visible;
-}
-
-.invisible {
-    visibility: hidden;
-}
-
 .container {
     border: solid red 2px;
 }

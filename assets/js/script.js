@@ -61,22 +61,18 @@ $("#get-started").on("click" , "#start-button" , function() {
         // wait 0.5 second
     // else
         // display feedback-incorrect
-        // time-penalty(); to countodwn the 5-second penalty
+        // timepenalty(); to countodwn the 5-second penalty
     // next question
 //end check for correctness
 
-var container = document.querySelector(".container");
+// loop through the quesions
+// start with question 1 - whatever
+// if button clicked, correctness();
+// loop through questions
+// end loop through the questions
 
-container.addEventListener("click", function(event) {
-    // this will track where the click actually happens within the container
-    var element = event.target;
-
-    if (element.matches("#start-button")) {
-        // make it hidden
-
-        // make question-1 visible
-
-        // all the text in the html doc will have to be stored in data sets
-    }
-});
-
+// score display
+// after the questions loop, display their score
+// enter name to save
+// send to local storage: name + timeLeft or score
+// end score display

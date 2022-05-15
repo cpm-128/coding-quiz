@@ -31,4 +31,7 @@ THEN I can save my initials and score (time left)
 ## Deployed Accption
 Repo URL: https://github.com/cpm-128/coding-quiz
 Live URL: https://cpm-128.github.io/coding-quiz/
-Screenshot:
+Screenshots:
+![quiz_start](https://user-images.githubusercontent.com/101371032/168499515-94690fed-c300-4f4a-ac9d-dee75578978f.png)
+<img width="1097" alt="quiz_in-progress" src="https://user-images.githubusercontent.com/101371032/168499521-632c69df-706d-4ef2-a74c-f7173ef32ddb.png">
+![quiz_highscores](https://user-images.githubusercontent.com/101371032/168499535-88251319-9ba8-4165-ad71-c1325377d7f8.png)

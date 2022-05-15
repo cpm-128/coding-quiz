@@ -29,6 +29,6 @@ WHEN the game is over
 THEN I can save my initials and score (time left)
 
 ## Deployed Accption
-Repo URL:
-Live URL:
+Repo URL: https://github.com/cpm-128/coding-quiz
+Live URL: https://cpm-128.github.io/coding-quiz/
 Screenshot:

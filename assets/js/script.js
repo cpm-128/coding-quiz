@@ -67,7 +67,18 @@ function quizPlay() {
 // start saveScore
 function saveScore() {
   $("#quiz").addClass("d-none")
-  console.log(">>> save score>>>" , timeLeft)
+  var name = window.prompt("Enter your name to save your score.")
+  var name = name.trim();
+  if (name !== "") {
+    var highScores = JSON.parse(localStorage.getItem("highScores")) || [];
+    var userScore = {
+      name: name,
+      score: timeLeft
+    };
+  highScores.push(userScore);
+  localStorage.setItem("highScores" , JSON.stringify(highScores));
+  };
+  window.location.href = "./highscores.html";
 };
 // end saveScore
 

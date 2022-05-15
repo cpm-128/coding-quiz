@@ -56,34 +56,159 @@ function countdown() {
 
 // function to loop through quiz
 function quizPlay() {
-  $(".question").append(questionsObj[currentQuestionIndex].question);
-    $("#button1").append(questionsObj[currentQuestionIndex].answers[0]);
-    $("#button2").append(questionsObj[currentQuestionIndex].answers[1]);
-    $("#button3").append(questionsObj[currentQuestionIndex].answers[2]);
-    $("#button4").append(questionsObj[currentQuestionIndex].answers[3]);
-  };
+  $(".question").text(questionsObj[currentQuestionIndex].question);
+    $("#button1").text(questionsObj[currentQuestionIndex].answers[0]);
+    $("#button2").text(questionsObj[currentQuestionIndex].answers[1]);
+    $("#button3").text(questionsObj[currentQuestionIndex].answers[2]);
+    $("#button4").text(questionsObj[currentQuestionIndex].answers[3]);
+};
 // end function to loop through quiz
 
-// start questionOne
-function questionOne() {
-  console.log(currentQuestionIndex);
+// start saveScore
+function saveScore() {
+  $("#quiz").addClass("d-none")
+  console.log(">>> save score>>>" , timeLeft)
+};
+// end saveScore
+
+// **questions are pretty hard coded in their own functions. struggling with a loop bc of need event listeners to move on
+
+// start questionFive
+function questionFive() {
+  currentQuestionIndex = 4;
+  console.log(">>> Question Index >>>" , currentQuestionIndex);
   quizPlay();
   //vwhere do they click?
   $(".multiple-choice-list").on("click" , "#button1" , function() {
     console.log(">>> incorrect >>>") ,
-    currentQuestionIndex++;
     timeLeft -= timePenalty;
+    saveScore();
   });
   $(".multiple-choice-list").on("click" , "#button2" , function() {
     console.log(">>> incorrect >>>")
+    timeLeft -= timePenalty;
+    saveScore();
+  })
+  $(".multiple-choice-list").on("click" , "#button3" , function() {
+    console.log(">>> incorrect >>>")
+    timeLeft -= timePenalty;
+    saveScore();
+  })
+  $(".multiple-choice-list").on("click" , "#button4" , function() {
+    console.log(">>> correct >>>")
+    saveScore();
+  })
+};
+// end questionFive
+
+// start questionFour
+function questionFour() {
+  currentQuestionIndex = 3;
+  console.log(">>> Question Index >>>" , currentQuestionIndex);
+  quizPlay();
+  //vwhere do they click?
+  $(".multiple-choice-list").on("click" , "#button1" , function() {
+    console.log(">>> incorrect >>>") ,
+    timeLeft -= timePenalty;
+    questionFive();
+  });
+  $(".multiple-choice-list").on("click" , "#button2" , function() {
+    console.log(">>> incorrect >>>")
+    timeLeft -= timePenalty;
+    questionFive();
   })
   $(".multiple-choice-list").on("click" , "#button3" , function() {
     console.log(">>> correct >>>")
+    questionFive();
   })
   $(".multiple-choice-list").on("click" , "#button4" , function() {
     console.log(">>> incorrect >>>")
+    timeLeft -= timePenalty;
+    questionFive();
+  })};
+// end questionFour
+
+// start questionThree
+function questionThree() {
+  currentQuestionIndex = 2;
+  console.log(">>> Question Index >>>" , currentQuestionIndex);
+  quizPlay();
+  //vwhere do they click?
+  $(".multiple-choice-list").on("click" , "#button1" , function() {
+    console.log(">>> incorrect >>>") ,
+    timeLeft -= timePenalty;
+    questionFour();
+  });
+  $(".multiple-choice-list").on("click" , "#button2" , function() {
+    console.log(">>> incorrect >>>")
+    timeLeft -= timePenalty;
+    questionFour();
+  });
+  $(".multiple-choice-list").on("click" , "#button3" , function() {
+    console.log(">>> incorrect >>>")
+    timeLeft -= timePenalty;
+    questionFour();
+  });
+  $(".multiple-choice-list").on("click" , "#button4" , function() {
+    console.log(">>> correct >>>")
+    questionFour();
+  });
+};
+// end questionThree
+
+// start questionTwo
+function questionTwo() {
+  currentQuestionIndex = 1;
+  console.log(">>> Question Index >>>" , currentQuestionIndex);
+  quizPlay();
+  //vwhere do they click?
+  $(".multiple-choice-list").on("click" , "#button1" , function() {
+    console.log(">>> incorrect >>>") ,
+    timeLeft -= timePenalty;
+    questionThree();
+  });
+  $(".multiple-choice-list").on("click" , "#button2" , function() {
+    console.log(">>> incorrect >>>")
+    timeLeft -= timePenalty;
+    questionThree();
+  });
+  $(".multiple-choice-list").on("click" , "#button3" , function() {
+    console.log(">>> correct >>>")
+    questionThree();
+  });
+  $(".multiple-choice-list").on("click" , "#button4" , function() {
+    console.log(">>> incorrect >>>")
+    timeLeft -= timePenalty;
+    questionThree();
+  });
+};
+// end questionTwo
+
+// start questionOne
+function questionOne() {
+  console.log(">>> Question Index >>>" , currentQuestionIndex);
+  quizPlay();
+  //vwhere do they click?
+  $(".multiple-choice-list").on("click" , "#button1" , function() {
+    console.log(">>> incorrect >>>") ,
+    timeLeft -= timePenalty;
+    questionTwo();
+  });
+  $(".multiple-choice-list").on("click" , "#button2" , function() {
+    console.log(">>> incorrect >>>")
+    timeLeft -= timePenalty;
+    questionTwo();
   })
-}
+  $(".multiple-choice-list").on("click" , "#button3" , function() {
+    console.log(">>> correct >>>")
+    questionTwo();
+  })
+  $(".multiple-choice-list").on("click" , "#button4" , function() {
+    console.log(">>> incorrect >>>")
+    timeLeft -= timePenalty;
+    questionTwo();
+  })
+};
 // end questionOne
 
 // start game on click, begin countdown, display question 1

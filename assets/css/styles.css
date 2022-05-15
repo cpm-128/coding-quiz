@@ -96,3 +96,7 @@ ul {
     color: var(--accent-color);
     border-top: 1px var(--accent-color) solid;
 }
+
+#highscores-list {
+    min-height: 100px;
+}
